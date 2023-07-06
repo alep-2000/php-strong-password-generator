@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 79, 182);
+}
+
+.white {
+    color: white;
+}
+
+.bg-red {
+    background-color: rgb(119, 21, 21);
+    width: 30%;
+    margin: 0 auto;
+}
