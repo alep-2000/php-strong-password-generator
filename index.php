@@ -1,39 +1,5 @@
 <?php 
-// FUNCTION TO GENERATE RANDOM NUMBER
-function randomNumber($min, $max){
-    return rand($min, $max);
-}
-
-// FUNCTION TO GENERATE RANDOM PASSWORD
-function randomPassword ($lenght){
-    // VARIABLES
-    $password = '';
-    $error = '';
-    $minuscole = 'abcdefghijklmnopqrstuvwxyz';
-    $maiuscole = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $numbers = '1234567890';
-    $special = '!?~@#-_+<>[]{}';
-
-    $string = $minuscole.$maiuscole.$numbers.$special;
-
-    if($lenght === ''){
-        $error = 'Non hai inserito nulla';
-    }
-    else if($lenght < 8 || $lenght > 32){
-        $results = 'Password troppo corta';
-    }
-    else{
-        // CICLE WHILE
-        while(strlen($password) < $lenght){
-            $index = randomNumber(0, strlen($string) - 1);
-            $characater = $string[$index];
-
-            $password .= $characater;
-        }
-        return $password;
-    }   
-    return $results;
-}
+require __DIR__ .'/functions.php';
 
 
 if(isset ($_GET['lenght'])){
